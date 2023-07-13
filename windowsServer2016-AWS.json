@@ -1,0 +1,34 @@
+{
+    "variables": {
+    },
+    "builders": [
+      {
+        "type": "amazon-ebs",  
+  
+        "access_key": "",
+        "secret_key": "",
+  
+        "region": "us-east-1",
+        "instance_type": "t2.micro",
+    
+        "source_ami_filter": {
+          "filters": {
+            "virtualization-type": "hvm",
+            "name" : "Windows_Server-2016-English-Full-Base-*",
+            "root-device-type" : "ebs"
+          },
+          "owners": ["amazon"],
+          "most_recent": true
+        },
+    
+        "ami_name": "{{user `image_name_aws`}}",
+        "user_data_file": ".\\setUpWinRM.ps1",
+  
+        "tags": {
+            "template_name": "WindowsServer2016-AWS",
+            "image_created": "{{isotime \"02-Jan-06-1504\"}}"
+        }
+        
+      }
+    ]
+  }

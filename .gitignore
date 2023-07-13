@@ -1,0 +1,4 @@
+awscli-bundle
+/Terraform/.terraform
+/Terraform/.terraform.lock.hcl
+awscli-bundle.zip
