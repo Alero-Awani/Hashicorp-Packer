@@ -13,8 +13,8 @@ source "amazon-ebs" "ubuntu" {
   region        = "us-east-1"
   source_ami    = "ami-053b0d53c279acc90"
   ssh_username  = "ubuntu"
-  vpc_id        = "vpc-03ae9d4027b89a419"
-  subnet_id     = "subnet-0a0a5d5c602d8e9e3"
+  vpc_id        = ""
+  subnet_id     = ""
 
 }
 
